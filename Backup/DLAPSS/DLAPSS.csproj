@@ -1,0 +1,286 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{14976AB3-C578-45F5-8FE0-EED2185BA911}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DLAPSS</RootNamespace>
+    <AssemblyName>DLAPSS</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BasicDataInfo\Frm_CardsInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_CardsInfo.Designer.cs">
+      <DependentUpon>Frm_CardsInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_ProductInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_ProductInfo.Designer.cs">
+      <DependentUpon>Frm_ProductInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_ProvidersInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_ProvidersInfo.Designer.cs">
+      <DependentUpon>Frm_ProvidersInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicDataInfo\Frm_UserInfo.Designer.cs">
+      <DependentUpon>Frm_UserInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBHelper.cs" />
+    <Compile Include="Entity\CardsInfo.cs" />
+    <Compile Include="Entity\common.cs" />
+    <Compile Include="Entity\OrderDetails.cs" />
+    <Compile Include="Entity\Orders.cs" />
+    <Compile Include="Entity\ProductInfo.cs" />
+    <Compile Include="Entity\Providers.cs" />
+    <Compile Include="Entity\ReturnProduct.cs" />
+    <Compile Include="Entity\StoreRoom.cs" />
+    <Compile Include="Entity\UserInfo.cs" />
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BasicDataInfo\Frm_CardsInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_CardsInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicDataInfo\Frm_ProductInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_ProductInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicDataInfo\Frm_ProvidersInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_ProvidersInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicDataInfo\Frm_UserInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_UserInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Login.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\Frm_SellEnter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_SellEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sell\Frm_SellOut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_SellOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Enter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Sell_Statistic_Enter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Out.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Sell_Statistic_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\Store_Statistic\Frm_Store_Statistic_Enter.resx">
+      <DependentUpon>Frm_Store_Statistic_Enter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistic\Store_Statistic\Frm_Store_Statistic_Out.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Store_Statistic_Out.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\Frm_StoreQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_StoreQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store\Frm_Store_LastNum.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_Store_LastNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store_Room\Frm_ReturnProduct.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_ReturnProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store_Room\Frm_StoreRoomEnter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_StoreRoomEnter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Store_Room\Frm_StoreRoomOut.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Frm_StoreRoomOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Sell\Frm_SellEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\Frm_SellEnter.Designer.cs">
+      <DependentUpon>Frm_SellEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sell\Frm_SellOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sell\Frm_SellOut.Designer.cs">
+      <DependentUpon>Frm_SellOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Enter.Designer.cs">
+      <DependentUpon>Frm_Sell_Statistic_Enter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\Sell_Statistic\Frm_Sell_Statistic_Out.Designer.cs">
+      <DependentUpon>Frm_Sell_Statistic_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\Store_Statistic\Frm_Store_Statistic_Enter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\Store_Statistic\Frm_Store_Statistic_Enter.designer.cs">
+      <DependentUpon>Frm_Store_Statistic_Enter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic\Store_Statistic\Frm_Store_Statistic_Out.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistic\Store_Statistic\Frm_Store_Statistic_Out.Designer.cs">
+      <DependentUpon>Frm_Store_Statistic_Out.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Frm_StoreQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\Frm_StoreQuery.Designer.cs">
+      <DependentUpon>Frm_StoreQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store\Frm_Store_LastNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store\Frm_Store_LastNum.Designer.cs">
+      <DependentUpon>Frm_Store_LastNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store_Room\Frm_ReturnProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store_Room\Frm_ReturnProduct.Designer.cs">
+      <DependentUpon>Frm_ReturnProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store_Room\Frm_StoreRoomEnter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store_Room\Frm_StoreRoomEnter.Designer.cs">
+      <DependentUpon>Frm_StoreRoomEnter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Store_Room\Frm_StoreRoomOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Store_Room\Frm_StoreRoomOut.Designer.cs">
+      <DependentUpon>Frm_StoreRoomOut.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_Navigate.GIF" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnfind.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\change.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login_bg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sql_bg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\商品进销存报表系统.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
